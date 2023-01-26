@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#This bash script will print "Best School" to the STDOUT 10 times
 
 i=1
 until [ $i -gt 10 ]
