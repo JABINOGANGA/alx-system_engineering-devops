@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# displays a story with each line of /etc/passwd.
+
+while IFS=: read -r username uid gid homedir command
+do
+    echo "The user $username is part of the group $gid gang, lives in $homedir and rides $command."
+    echo "User ID: $uid's place is protected by the passcode, more info about the user here: $(grep "$uid" /etc/passwd)"
+    echo ""
+done < /etc/passwd
